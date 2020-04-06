@@ -28,6 +28,8 @@ This dataset contains details of 229,792 logged notifications received on the An
 
 In this dataset, we logged the users' notifications and the details of the venue where the user was when receiving the notification, as obtained by the Google Places API. Only the most likely venue candidate was logged (Places API returns a number of candidates).
 
+Notification Table
+----------------
 The following fields are found in the "notifications" table:
 
 
@@ -116,3 +118,11 @@ secondarycat - extracted secondary category of the user's current venue (from pl
 
 
 finalcat - primarycat with some manual amendments for certain venues
+
+LocationTypes table
+----------------
+id - the venue category id
+
+type - the textual description of the category as provided by Google Places API
+
+mastertype - merged textual descriptions as used in our paper
