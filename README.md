@@ -25,35 +25,94 @@ DATA DESCRIPTION
 ----------------
 
 This dataset contains details of 229,792 logged notifications received on the Android devices of 44 users, in the period between 2018-12-19 and 2019-05-03.
+
 In this dataset, we logged the users' notifications and the details of the venue where the user was when receiving the notification, as obtained by the Google Places API. Only the most likely venue candidate was logged (Places API returns a number of candidates).
 
 The following fields are found in the "notifications" table:
+
+
 primid - autoincremented row identifier
+
+
 user_id - user's unique id
+
+
 id - the user's autoincremented row identifier
+
+
 nid - the notification id (set by the issuing application)
+
+
 priority - the notification priority (set by the issuing application)
+
+
 packageName - the application generating the notification
+
+
 timePosted - unix timestamp of notification issue
+
+
 timeRemoved - unix timestamp of notification dismissal
+
+
 sound - whether the notification was programmed to have a custom sound
+
+
 default_Sound - whether the notificaiton was programmed to use the device default sound
+
+
 LED - whether the notification was programmed to have a custom LED blinking pattern
+
+
 default_LED - whether the notification was programmed to use the device default LED blinking pattern
+
+
 vibrationPattern - whether the notification was programmed to have a custom vibration pattern
+
+
 default_Vibration - whether the notification was programmed to use the device default vibration pattern
+
+
 ringerMode - the current ringer mode of the device
+
+
 PlaceName - the current user's venue name, retrieved from the Google Places API.
+
+
 PlaceId - the current user's venue ID, retrieved from the Google Places API.
+
+
 place_confidence - the current user's venue confidence, retrieved from the Google Places API.
+
+
 PlaceCategories - the current user's venue categories, retrieved from the Google Places API (see also locationtypes table).
+
+
 lat - the current user's venue latitude, retrieved from the Google Places API.
+
+
 lng - the current user's venue longitude, retrieved from the Google Places API.
+
+
 idle - whether the user's device was in "idle" state
+
+
 interactive - whether the user's device was in "interactive" state
+
+
 screen_state - the current state of the user's device screen
+
+
 lock_scr_notifs - whether the user's device is set to allow notifications on the lock screen
+
+
 flags - various flags associated with notification state
+
+
 primarycat - extracted primary category of the user's current venue (from placeCategories field)
+
+
 secondarycat - extracted secondary category of the user's current venue (from placeCategories field)
+
+
 finalcat - primarycat with some manual amendments for certain venues
